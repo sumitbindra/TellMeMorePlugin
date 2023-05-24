@@ -23,6 +23,20 @@
         overflow-y: auto;
         font-size: 18px; /* Increased font size */
       }
+
+      .processing {
+        color: #fff;
+        background-color: #ff0000;  /* Red background */
+        border-color: #ff0000;  /* Red border */
+        pointer-events: none;  /* Prevent further clicks */
+        animation: blink 1s linear infinite;
+      }
+
+      @keyframes blink {
+          0% { opacity: 1; }
+          50% { opacity: .1; }
+          100% { opacity: 1; }
+      }
     </style>
   </head>
   <body>

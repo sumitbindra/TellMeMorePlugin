@@ -30,7 +30,7 @@ async function tellMeMore(text) {
     body: JSON.stringify({
       "model": "gpt-3.5-turbo",
       "messages": messages,
-      "max_tokens": 500
+      "max_tokens": 100
     })
   });
 
