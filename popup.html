@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tell Me More Plugin</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      html, body {
+        width: 400px;
+        height: 300px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      #tellMeMoreResult {
+        margin: auto;
+        width: 90%;
+        height: 150px; /* Increased height */
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 20px;
+        overflow-y: auto;
+        font-size: 18px; /* Increased font size */
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="tellMeMoreResult" class="form-control" readonly></textarea>
+    <div class="d-flex flex-column">
+      <button id="tellMeMoreButton" class="btn btn-primary mt-2">Tell Me More</button>
+      <button id="dismissButton" class="btn btn-secondary mt-2">Dismiss</button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
