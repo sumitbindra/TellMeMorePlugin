@@ -18,7 +18,7 @@ async function tellMeMore(text) {
 
   let messages = [
     { "role": "system", content: "You are an encyclopedia of knowledge with all relevant information available to you at all times." },
-    { "role": "user", content: `Digest ${text} and provide relevant and non-redundant information on this topic.`}
+    { "role": "user", content: `I want to better understand the text in triple quotes """${text}""". Please provide relevant and non-redundant information on this topic.`}
   ];
 
   let response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -30,7 +30,7 @@ async function tellMeMore(text) {
     body: JSON.stringify({
       "model": "gpt-3.5-turbo",
       "messages": messages,
-      "max_tokens": 100
+      "max_tokens": 500
     })
   });
 
